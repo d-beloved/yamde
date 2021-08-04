@@ -9,10 +9,10 @@ import { darkTheme } from './themes/dark'
 
 import { defaultToolbarAction } from './utils/defaultToolbarActions'
 
-const YamdeComp = ({ value, handler, theme = 'light', toolbar = defaultToolbarAction }: Props) => {
+const YamdeComp = ({ defaultValue, value, handler, theme = 'light', toolbar = defaultToolbarAction }: Props) => {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <Yamde value={value} handler={handler} toolbar={toolbar} />
+      <Yamde defaultValue={defaultValue} value={value} handler={handler} toolbar={toolbar} />
     </ThemeProvider>
   )
 }
